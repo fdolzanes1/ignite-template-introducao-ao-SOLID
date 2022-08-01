@@ -4,7 +4,7 @@ class User {
   // Complete aqui
   id: string;
   name: string;
-  admin: boolean = false;
+  admin: boolean;
   email: string;
   created_at: Date;
   updated_at: Date;
@@ -12,6 +12,9 @@ class User {
   constructor() {
     if (!this.id) {
       this.id = uuidV4();
+    }
+    if (!this.admin) {
+      this.admin = false;
     }
   }
 }
